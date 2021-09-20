@@ -178,9 +178,9 @@ public class GameController : MonoBehaviour
             score++;
 
             foreach(GameObject newBall in NewBallController.balls){
-                newBall.GetComponent<NewBallController>().shouldCheck = true;
                 try
                 {
+                    newBall.GetComponent<NewBallController>().shouldCheck = true;
                     newBall.GetComponent<NewBallController>().GoToMainBall();
                 }
                 catch (System.Exception ex)
@@ -192,9 +192,9 @@ public class GameController : MonoBehaviour
 
             foreach(GameObject newBall in bricks[1]){
                 if(newBall != null && newBall.GetComponent<NewBallController>() != null){
-                    newBall.GetComponent<NewBallController>().shouldCheck = true;
                     try
                     {
+                        newBall.GetComponent<NewBallController>().shouldCheck = true;
                         Destroy(newBall.GetComponent<ThrowDown>());
                         newBall.GetComponent<NewBallController>().GoToMainBall();
                     }
